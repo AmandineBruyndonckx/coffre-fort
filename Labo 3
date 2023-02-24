@@ -1,0 +1,305 @@
+\documentclass[11pt]{exam}
+%\usepackage[a4paper,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+\usepackage{amsmath, amsfonts}
+
+\usepackage{amssymb,amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{algorithmic}
+\usepackage{lastpage}
+\usepackage[english,french]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,french]{babel}
+\usepackage{paralist}
+\usepackage{subcaption}
+\usepackage{graphicx} % Include figure files
+\graphicspath{ {./images/} }
+\usepackage[Export]{adjustbox}
+%\usepackage{adjustbox}
+
+\newsavebox\mysavebox
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+
+
+%\usepackage{fullpage}
+\usepackage{framed}
+\setlength\FrameSep{0.5em}
+\setlength\OuterFrameSep{\partopsep}
+
+\newcommand\FramedBox[3]{%
+  \setlength\fboxsep{0pt}
+  \fbox{\parbox[t][#1][c]{#2}{\centering\huge #3}}}
+
+%\newsavebox{\mybox}
+%\newenvironment{ansbox}[1]{\begin{lrbox}{\mybox}\begin{minipage}[t][#1]%{\linewidth}}
+%{\vfill\hfill\end{minipage}\end{lrbox}\fbox{\usebox{\mybox}}}
+  
+
+\extraheadheight{.95in}
+
+
+
+\header{UCLouvain -- EPL \\
+        LEPL1502: \textsc{Projet 2}\\
+        Laboratoire  -- Q2 2023\\
+        [1pt]}{}{  Groupe: \fbox{\parbox[c][8mm][c]{50mm}{\centering 11.31}} \\ 
+         } 
+
+
+       
+\footer{}{Page~\thepage/\pageref{LastPage}}{}
+
+      
+%\qformat{\textbf{\thequestiontitle} \hfill}
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{caption}
+
+\author{}
+
+
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\huge Préparation laboratoire et rapport mesures}
+\end{center}
+\setcounter{section}{0}
+
+\section*{\textbf{\large Nom de l'expérience: circuit RC, analyse théorique et expérimentale du cycle charge/- décharge}}
+Objectif de l'expérience:
+
+\FramedBox{2cm}{0.137\textwidth 
+Analyser l’impact de la fréquence du signal $V (t)$ sur le comportement du circuit RC.
+}
+{$\quad$} 
+
+Circuit:                 \hspace{0.5\textwidth}         équations et/ou courbes théoriques:
+
+
+
+\begin{minipage}[t]{1\textwidth}
+    \begin{minipage}{0.5\textwidth}
+\begin{framed}
+\begin{minipage}[t][12cm][t]{1\textwidth}
+\includegraphics[scale=0.5]{circuit_1}
+
+
+
+\end{minipage}
+\end{framed}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{framed}
+\begin{minipage}[t][12cm][t]{0.8\textwidth}
+$V_{c}(t) = V(t) - K . e^{\frac{-1}{CR} t}$
+\newline
+\newline
+
+Soit ça monte :
+\\
+
+$V_{c}(t) = V - V . e^{\frac{-1}{CR} t}$
+\\
+
+Soit ça descend :
+\\
+
+$V_{c}(t) =  V . e^{\frac{-1}{CR} t}$
+\\
+
+Pour \tau : 
+\\
+
+$\tau = \dfrac{T}{2 \ln{\dfrac{V_{max}}{V_{min}}}}$
+
+   
+        
+    
+
+
+
+  \end{minipage}
+\end{framed}
+\end{minipage}
+
+
+\end{minipage}
+
+\newpage
+Mode opératoire :
+
+\begin{framed}
+ 
+
+\begin{minipage}[t][8cm][t]{0.8\textwidth}
+
+\begin{enumerate}
+        \item Construire le circuit
+        \item Connecter une source de tension carrée de période T qui varie entre 0V et 2V et qui a une fréquence de 10KHz
+        \item Mesurer $V_{c}$ avec le picomètre, en mettant les tiges aux deux extrémités du pico
+        \item Faire varier la fréquence de notre source de tension
+    \end{enumerate}
+
+
+
+
+\end{minipage}
+\end{framed}
+
+Résultats du mode opératoire:
+
+\begin{framed}
+    
+
+\begin{minipage}[t][8cm][t]{0.5\textwidth}
+
+
+
+
+
+
+\end{minipage}
+\end{framed}
+\newpage
+\section*{\textbf{\large Nom de l'expérience: générateur de signaux}}
+Objectif de l'expérience:
+
+\FramedBox{2cm}{0.072\textwidth 
+Le but de l’expérience est de mesurer le signal périodique de sortie $V_{out}$ au cours du temps.
+}{$\quad$} 
+
+Circuit:                 \hspace{0.5\textwidth}         équations et/ou courbes théoriques:
+
+
+
+\begin{minipage}[t]{1\textwidth}
+    \begin{minipage}{0.5\textwidth}
+\begin{framed}
+\begin{minipage}[t][12cm][t]{1\textwidth}
+\includegraphics[scale=0.5]{circuit_2}
+
+
+
+\end{minipage}
+\end{framed}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{framed}
+\begin{minipage}[t][12cm][t]{0.8\textwidth}
+
+$\bold{\underline{V_{out} = V_{dd} :}}
+\newline
+\newline 
+V_{in+} = \dfrac{V_{dd} R_{2}}{R_{2} + \frac{R_{1}R_{3}}{R_{2} + R_{3}}}
+\newline
+\newline
+\newline
+V_{in-} = V_{dd} - Ke^{\frac{-t}{C.pRef}}$
+\newline
+\newline
+$\bold{\underline{V_{out} = 0 :}}
+\newline
+\newline 
+V_{in+} = \dfrac{V_{dd} \frac{R_{2}R_{3}}{R_{2} + R_{3}}}{R_{1} + \frac{R_{2}R_{3}}{R_{2} + R_{3}}$
+\newline
+\newline
+\newline
+$V_{in-} =  Ke^{\frac{-t}{C.pRef}}}$
+
+
+
+Graphique :
+\newline
+\includegraphics[scale=0.5]{graph_1}
+
+   
+        
+    
+
+
+
+  \end{minipage}
+\end{framed}
+\end{minipage}
+\end{minipage}
+\newpage
+Mode opératoire:
+
+\begin{framed}
+    
+
+\begin{minipage}[t][8cm][t]{0.8\textwidth}
+\begin{enumerate}
+    \item Construire le circuit
+    \item Connecter la source de tension continue de 5V ($V_{dd}$)
+    \item Prendre différentes mesures en faisant \newline varier le potentiomètre
+    
+\end{enumerate}
+
+
+
+
+
+\end{minipage}
+\end{framed}
+
+Résultats du mode opératoire:
+
+\begin{framed}
+    
+
+\begin{minipage}[t][8cm][t]{0.5\textwidth}
+
+
+
+
+
+
+
+\end{minipage}
+\end{framed}
+
+\end{document}
+
+
+
