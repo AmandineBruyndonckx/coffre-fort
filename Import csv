@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib . pyplot as plt
+import pandas as pd
+
+
+data = pd.read_csv("/Users/florianducourtieux/Desktop/info/Projet 2/Labo 3/labo3-exp2(Vin-).csv",sep=";")
+print(data)
+
+signal1 = data ["Canal A"].astype(float)
+signal2 = data ["Canal B"].astype(float)
+print(signal1)
+time = data ["Temps"].astype(float)
+
+
+
+
+
+plt.plot(time, signal1,label="Source",color="b")
+plt.plot(time,signal2,label="Mesure",color="r")
+plt.ylim(0,6)
+plt.ylabel("Tension[V]")
+plt.xlabel("Temps[ms]")
+
+#plt.xticks(np.arange(0,signal1/3))
+
+plt.show()
