@@ -4,7 +4,7 @@ import pandas as pd
 
 def data_graphe(file) :
     """ mettre un file .csv sans les unités dans le fichier (donc juste les titres, il faut retirer les unités à la main dans le fichier)
-
+        et changer les "," dans les fichiers .csv par des "."
         renvoie : Canal A ; Canal B ; Temps
     """
     data = pd.read_csv(file,sep=";")
