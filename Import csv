@@ -20,7 +20,7 @@ def data_graphe(file) :
 
 
     return signal1,signal2,time
-def plot_graphe(data) :
+def plot_graphe(data,titre) :
     """mettre un data graphe
 
         plot le graphe
@@ -28,6 +28,7 @@ def plot_graphe(data) :
     
     plt.plot(data[2], data[0] ,label="Source",color="b")
     plt.plot(data[2],data[1],label="Mesure",color="r")
+    plt.title(titre)
     plt.ylim(0,np.max(data[0]) +2)
     plt.ylabel("Tension[V]")
     plt.xlabel("Temps[ms]")
@@ -36,6 +37,7 @@ def plot_graphe(data) :
 
     plt.show()
 
-plot_graphe(data_graphe("/Users/florianducourtieux/Desktop/info/Projet 2/Labo 3/labo3 - exp1 (f=5)_3.csv"))
-plot_graphe(data_graphe("Projet 2/Labo 3/labo3 - exp1_03.csv"))
-plot_graphe(data_graphe("Projet 2/Labo 3/labo3 - exp2(Vin+).csv"))
+plot_graphe(data_graphe("/Users/florianducourtieux/Desktop/info/Projet 2/Labo 3/labo3 - exp1 (f=5)_3.csv"),"Expérience 1 (f = 5Khz)")
+plot_graphe(data_graphe("Projet 2/Labo 3/labo3 - exp1_03.csv"),"Expérience 1 (f = 10Khz)")
+plot_graphe(data_graphe("Projet 2/Labo 3/labo3 - exp2(Vin+).csv"),"Expérience 2 (Vin+)")
+
